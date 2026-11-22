@@ -1,0 +1,15 @@
+model,align,absrel,rmse,d1,ms_per_img
+dinov3-vits16+head,median,0.1422,0.5186,0.8107,9.8236
+dinov3-vits16+head,none,0.1882,0.6051,0.7226,9.8236
+dinov2-small+head,median,0.1273,0.4656,0.8448,7.6465
+dinov2-small+head,none,0.1682,0.5488,0.7592,7.6465
+dinov3-vitb16+head,median,0.1207,0.4502,0.8596,4.6907
+dinov3-vitb16+head,none,0.1773,0.5622,0.7477,4.6907
+dinov2-base+head,median,0.1109,0.4169,0.8795,4.4291
+dinov2-base+head,none,0.1511,0.4953,0.7953,4.4291
+unet-resnet34,median,0.2117,0.7608,0.6774,4.2129
+unet-resnet34,none,0.2997,0.9028,0.5875,4.2129
+DA3-SMALL,median,0.1182,0.5236,0.8587,11.192
+DA3-SMALL,none,0.656,2.0275,0.0038,11.192
+DA3METRIC-LARGE,median,0.0766,0.3707,0.9259,11.4863
+DA3METRIC-LARGE,none,0.092,0.4265,0.9185,11.4863

@@ -1,6 +1,6 @@
 # Real-Time Monocular 3D Object Distance Estimation with DINOv3 & YOLO11
 
-A computer vision pipeline that estimates scene depth from a single RGB image or live video stream, back-projects detected object centers into 3D camera coordinates, and computes real-time pairwise 3D Euclidean distances between objects (~27 FPS on Apple Silicon MPS).
+A computer vision pipeline that estimates scene depth from a single RGB image or live video stream, back-projects detected object centers into 3D camera coordinates, and computes real-time pairwise 3D Euclidean distances between objects (~30 FPS on Apple Silicon (Hybrid Approach)).
 
 **Pipeline Architecture:**
 
@@ -21,7 +21,7 @@ flowchart TD
 1. **NYU Depth v2 Benchmarking:** Evaluates frozen **DINOv3** backbones against **DINOv2**, **Depth Anything 3**, and a **ResNet-34 U-Net** baseline across 654 test images.
 2. **Lightweight Multi-Scale Decoder:** Trains custom convolutional depth heads on top of frozen `DINOv3-ViT-S/16` and `DINOv3-ViT-B/16` representations.
 3. **Physical Metric Calibration:** Validates predicted 3D object-to-object distances against physical tape-measure ground truth.
-4. **Real-Time Edge Inference:** Combines `YOLO11s` and `DinoDepth` on Apple Silicon (`MPS`) with live iPhone Continuity Camera / webcam streaming.
+4. **Real-Time Edge Inference:** Combines `YOLO11s` and `DinoDepth` on Apple Silicon (both `CPU` and `MPS` gpu) with live iPhone Continuity Camera / webcam streaming.
 
 ## Repository Structure
 
@@ -166,7 +166,7 @@ python stream_iphone.py
 - Continuous MJPEG stream: `[http://127.0.0.1:8080/video](http://127.0.0.1:8080/video)`
 - Single JPEG snapshot: `[http://127.0.0.1:8080/frame.jpg](http://127.0.0.1:8080/frame.jpg)`
 
-## Acknowledgments
+<!-- ## Acknowledgments -->
 
 ## Author & Context
 
